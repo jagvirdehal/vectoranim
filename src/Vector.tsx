@@ -5,14 +5,10 @@ import { Matrix3 } from 'three';
 import { AnimatedProps } from '@react-spring/three';
 import { FluidValue } from '@react-spring/shared';
 
+import useStore from './Store';
+
 const VECTOR_ROUNDNESS = 32;
 const Z_UP = true;
-
-// export interface ObjectProps {
-//     position?: Vector3;
-//     scale?: Vector3;
-//     rotation?: Euler;
-// }
 
 export interface VectorProps extends GroupProps {
     target: Vector3,
@@ -21,9 +17,6 @@ export interface VectorProps extends GroupProps {
     color?: string | number | THREE.Color,
     showComponents?: boolean,
 }
-
-let props: VectorProps = {target: [1,2,3]};
-console.log(props.position);
 
 function getRotation(pos: THREE.Vector3): [xRot: number, yRot: number, zRot: number] {
     let yrot, zrot;
@@ -101,6 +94,7 @@ export default function Vector(props: VectorProps) {
     const [rotation, setRotation] = useState(getRotation(target));
     const [length, setLength] = useState(target.length());
 
+    // Updating rotation and length values when target changes
     useEffect(() => {
         let target = targetToThree(props.target);
         setTarget(target);
@@ -108,6 +102,7 @@ export default function Vector(props: VectorProps) {
         setLength(target.length());
     }, [props.target]);
 
+    // Rendering component vectors
     let [rawx, rawy, rawz] = getRawTarget(target).toArray();
     let children = [
         rawx !== 0 ? <Vector color="#f66" target={[rawx, 0, 0]} /> : null,

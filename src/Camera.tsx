@@ -1,9 +1,16 @@
-import { OrbitControls } from '@react-three/drei';
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 
 export default function Camera() {
     return(
         <>
-            <OrbitControls autoRotate target={[0, 0, 0]} />
+            <PerspectiveCamera
+                makeDefault
+                position={[2.5, 2, 6]}
+                />
+            <OrbitControls
+                autoRotate
+                enablePan={false}
+                target={[0, 0, 0]} />
         </>
     )
 }

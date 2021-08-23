@@ -37,6 +37,10 @@
   }
 }
 
-#root {
+#app {
   height: 100vh;
+}
+
+#app #ui {
+  position: absolute;
 }
