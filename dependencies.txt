@@ -1,6 +1,7 @@
 npm i @types/three --save
 npm i three @react-three/fiber --save
 npm i @react-three/drei --save
-npm i zustand
+npm i zustand --save
 npm i @react-spring/three --save
 npm i @use-gesture/react
+npm i react-router-dom --save
