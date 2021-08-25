@@ -1,4 +1,4 @@
-import './App.css';
+import './R3.css';
 import React from 'react';
 import { Canvas } from '@react-three/fiber';
 
@@ -9,11 +9,13 @@ import Lights from './Lights';
 import Scene from './Scene';
 import Camera from './Camera';
 
-function App() {
+export default function R3() {
   return (
-    <div id="app">
-      <UI />
-      <Canvas id="scene">
+    <div className="r3">
+      <div className="ui">
+        <UI />
+      </div>
+      <Canvas className="scene">
         <Grid />
         <Lights />
         <Scene />
@@ -22,5 +24,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

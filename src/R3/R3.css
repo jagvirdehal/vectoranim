@@ -1,0 +1,14 @@
+.r3 {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+.r3 .scene {
+  flex: 1;
+}
+
+.r3 .ui {
+  z-index: 1;
+  position: absolute;
+}

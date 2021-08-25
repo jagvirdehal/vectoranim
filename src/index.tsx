@@ -1,12 +1,42 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import R3 from './R3';
 import reportWebVitals from './reportWebVitals';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+import Dashboard from './Dashboard';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <Switch>
+        <Route path="/dash">
+          <Dashboard />
+        </Route>
+        <Route path="/r3">
+          <R3 />
+        </Route>
+        <Route path="/">
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/r3">Go to R3</Link>
+                </li>
+                <li>
+                  <Link to="/dash">Go to Dashboard</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </Route>
+      </Switch>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );

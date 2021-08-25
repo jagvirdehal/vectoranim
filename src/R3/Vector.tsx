@@ -2,10 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { GroupProps, MeshProps, Vector3 } from '@react-three/fiber';
 import { Matrix3 } from 'three';
-import { AnimatedProps } from '@react-spring/three';
-import { FluidValue } from '@react-spring/shared';
-
-import useStore from './Store';
+import { animated } from '@react-spring/three';
 
 const VECTOR_ROUNDNESS = 32;
 const Z_UP = true;
@@ -134,3 +131,5 @@ export default function Vector(props: VectorProps) {
         </group>
     );
 }
+
+export const AnimatedVector = animated(Vector);
