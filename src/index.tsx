@@ -11,8 +11,8 @@ import {
 import './index.css';
 import R3 from './R3';
 import Dashboard from './Dashboard';
+import { Globals } from '@react-spring/three';
 
-import { Globals } from 'react-spring';
 Globals.assign({
   frameLoop: 'always',
 })
