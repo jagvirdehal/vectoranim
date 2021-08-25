@@ -20,24 +20,26 @@ Globals.assign({
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/r3">Go to R3</Link>
-            </li>
-            <li>
-              <Link to="/dash">Go to Dashboard</Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
       <Switch>
         <Route path="/dash">
           <Dashboard />
         </Route>
         <Route path="/r3">
           <R3 />
+        </Route>
+        <Route path="/">
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/r3">Go to R3</Link>
+                </li>
+                <li>
+                  <Link to="/dash">Go to Dashboard</Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
         </Route>
       </Switch>
     </Router>
