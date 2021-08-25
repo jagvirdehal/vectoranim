@@ -11,6 +11,11 @@ import {
 } from 'react-router-dom';
 import Dashboard from './Dashboard';
 
+import { Globals } from 'react-spring';
+Globals.assign({
+  frameLoop: 'always',
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <Router>
