@@ -1,5 +1,4 @@
-# VR Vectors!
-TODO: Finish this README
+# VR Vectors
 
 ## Rough overview
 
